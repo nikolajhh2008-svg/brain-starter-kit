@@ -10,4 +10,4 @@ created: {{DATE}}
 <2–6 sentences in YOUR OWN words: the idea, why it matters to you,
 and what you'll do differently because of it.>
 
-Related: [[Start here]]
+Related: [[Home]]

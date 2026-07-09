@@ -17,4 +17,4 @@ created: {{DATE}}
 ## Assessment
 <How credible/useful? What could it feed — a thesis, project, exam? 1–2 sentences.>
 
-Related: [[Start here]]
+Related: [[Home]]

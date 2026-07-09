@@ -1,4 +1,4 @@
-# Tutorial: from zero to a running brain (≈ 35 minutes)
+# Tutorial: from zero to a running brain (≈ 20 minutes + optional interview)
 
 For people who have **never used Obsidian or Claude Code**. Every stage
 ends with a checkpoint ("how you know it worked").
@@ -24,7 +24,7 @@ ends with a checkpoint ("how you know it worked").
 
 ---
 
-## Stage 2 — Start the setup (5 min)
+## Stage 2 — Start the setup (5–10 min, ends with your first win)
 
 You don't need to download anything — **Claude does that too.** Open the
 terminal, type `claude`, then say literally:
@@ -33,43 +33,50 @@ terminal, type `claude`, then say literally:
 > https://github.com/nikolajhh2008-svg/brainwarden — clone it and
 > follow SETUP-FOR-CLAUDE.md step by step.
 
-Claude fetches the kit, checks your prerequisites, asks four short
-questions (life situation, your areas, first goal, **your brain's
-language** — German works fine) and **guides you through every step**.
+Claude fetches the kit, checks your prerequisites, asks **three short
+questions** (your life situation, the first thing the brain should help
+with, **your brain's language** — German works fine) — and then builds
+your first real notes from your answers: your areas, your first project,
+your deadlines, and a `Home` page that shows it all.
 
 *(Advanced alternative: clone the repo yourself, `cd` into it, start
 `claude` and say: "Read SETUP-FOR-CLAUDE.md and set up my brain
 accordingly.")*
 
-✅ **Checkpoint:** Claude reports the setup as done and `ls ~/Brain` shows
-at least the six core folders (`00-inbox` … `90-archive`) plus any
-modules you picked. (If "capture:" isn't recognized right away, restart
-Claude Code once — fresh skills load with a new session.)
+✅ **Checkpoint:** `ls ~/Brain` shows the six core folders (`00-inbox` …
+`90-archive`; the extra `_templates` folder is normal — that's where note
+blueprints live) — and Claude tells you your first project is already in
+there. (If "capture:" isn't recognized right away, restart Claude Code
+once — fresh skills load with a new session.)
 
 ---
 
-## Stage 3 — Open the vault in Obsidian (2 min)
+## Stage 3 — See it in Obsidian (2 min)
 
-Obsidian → **"Open folder as vault"** → pick `~/Brain`.
-Click around starting from **"Start here"**.
+Obsidian → **"Open folder as vault"** → pick `~/Brain` → click **Home**.
 
-✅ **Checkpoint:** You see "Start here" and can click through to
-[[Deadlines]].
+This is the moment: your dashboard already shows *your* project, *your*
+deadlines — a brain that's alive before you wrote a single note yourself.
 
----
-
-## Stage 4 — The onboarding interview (10–15 min, the step that matters)
-
-Claude runs it automatically at the end of the setup (questions:
-INTERVIEW.md). Just talk — the more you share, the more useful the brain.
-Anything that shouldn't go in: just say "private".
-
-✅ **Checkpoint:** Obsidian now shows "About me", individual people notes
-under `30-knowledge/people/` — and the graph view shows its first connections.
+✅ **Checkpoint:** `Home` names your first project under "Right now" and
+you can click through to [[Deadlines]].
 
 ---
 
-## Stage 5 — Practice the three habits (5 min)
+## Stage 4 — The onboarding interview (10–15 min, optional but worth it)
+
+Claude offers this at the end of the setup — **your call, now or later.**
+It's what turns a running brain into one that really *knows* you: your
+people, your goals, your working style. Just talk — voice dumps welcome,
+skipping allowed. Anything that shouldn't go in: just say "private".
+
+✅ **Checkpoint:** Obsidian shows "About me" and individual people notes
+under `30-knowledge/people/` — and the graph view shows its first
+connections. (Skipped it? Fine — it waits as an open question on `Home`.)
+
+---
+
+## Stage 5 — Practice the five verbs (5 min)
 
 **1. Capture** — in any Claude session:
 > capture: idea for the next project — draft the outline by Friday
@@ -78,11 +85,17 @@ under `30-knowledge/people/` — and the graph view shows its first connections.
 `~/Brain/00-inbox/raw/` and say:
 > ingest
 
-**3. Review** — weekly (or right now, to test it):
+**3. Ask** — the librarian, answers only from your notes:
+> what does my brain know about my first project?
+
+**4. Review** — weekly (or right now, to test it):
 > brain review
 
-✅ **Checkpoint:** After the review `00-inbox/` is empty and your thought
-has become a linked note.
+**5. Research** — the power move:
+> research my brain
+
+✅ **Checkpoint:** After the review `00-inbox/` is empty, your thought has
+become a linked note — and `Home` shows it under "New this week".
 
 ---
 
@@ -90,15 +103,15 @@ has become a linked note.
 
 | Day | What to do |
 |---|---|
-| Day 1 | Setup + interview (this tutorial) |
+| Day 1 | Setup (this tutorial) — interview now or later |
 | Day 2–4 | Only **capture** — every idea, date, person. No sorting! |
-| Day 5 | First **"brain review"** — watch the inbox turn into notes |
-| Day 6–7 | Pull the first **output**: "Build me a study sheet / project plan / draft for X from my notes" — and try the power move: **"research my brain"** (Claude fills your open questions with sourced facts) |
+| Day 5 | First **"brain review"** — watch the inbox turn into notes and `Home` refresh itself |
+| Day 6–7 | Pull the first **output**: "Build me a study sheet / project plan / draft for X from my notes" — and try **"research my brain"** (Claude fills your open questions with sourced facts) |
 
 After that the system carries itself: capture on the side, ten minutes of
-review per week. **The success metric is output** — if the brain hasn't
-gifted you a text, plan or study sheet after two weeks, tell Claude
-exactly that.
+review per week — and if you disappear for a month, the next review just
+catches up. **The success metric is output** — if the brain hasn't gifted
+you a text, plan or study sheet after two weeks, tell Claude exactly that.
 
 ---
 

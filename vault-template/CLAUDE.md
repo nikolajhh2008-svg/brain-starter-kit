@@ -27,7 +27,7 @@ depend on them).
 
 **Core sorting principle:** file by ACTIONABILITY (which project/area
 needs this NOW?), never by topic taxonomy. Findability comes from
-[[links]], tags and search — not from folder depth.
+`[[links]]`, tags and search — not from folder depth.
 
 ## Note schema (machine-readable)
 Frontmatter for every note OUTSIDE the inbox:
@@ -57,6 +57,9 @@ created: YYYY-MM-DD
 ## Instructions for Claude
 - Retrieval: ALWAYS run `python3 ~/Brain/.tools/search.py <terms>` first
   (saves context), then read only the hits — never the whole vault.
+- `Home.md` is the living dashboard — the review refreshes all four
+  blocks; deadline captures update its "Next deadlines" block right away.
+  It must always reflect the current state of the brain.
 - Incoming sources: files in `00-inbox/raw/` → skill `brain-ingest`.
 - Template per note type: knowledge → `_templates/knowledge-note.md` ·
   source → `source-note.md` · person → `person-note.md` · project →
@@ -81,5 +84,10 @@ created: YYYY-MM-DD
 
 ## Commands
 - **brain-capture** — frictionless thought → inbox (from any session)
-- **brain-ingest** — split a source from raw/ into atomic notes
-- **brain-review** — weekly: inbox to zero, hygiene, git commit
+- **brain-ingest** — source from raw/ → triaged notes (light for
+  reference material, atomic for build material)
+- **brain-ask** — answer questions from the vault, with cited notes
+- **brain-review** — weekly: inbox to zero, contradiction check,
+  connections, hygiene, refresh Home, git commit
+- **brain-research** — fill open questions and thin notes with verified,
+  sourced facts

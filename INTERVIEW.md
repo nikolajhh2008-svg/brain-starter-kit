@@ -1,9 +1,11 @@
-# The onboarding interview (for Claude: run in setup step 5)
+# The onboarding interview (for Claude: offered in setup step 6 — or whenever the human says "interview me for my brain")
 
-Goal: after this conversation the brain knows its human. Two phases:
-an optional **local discovery** (with explicit consent), then the
-**interview** — which works far better once you have something concrete
-to ask about.
+Goal: after this conversation the brain knows its human. The interview is
+**optional and deferrable** — the brain already works without it; this is
+the deepening. Two phases: an optional **local discovery** (with explicit
+consent), then the **interview** — which works far better once you have
+something concrete to ask about. It also works in pieces: a block now, a
+block next week.
 
 ## Phase 0 — Ask THIS first (verbatim, before any question):
 
@@ -109,5 +111,7 @@ later". If they say "private": don't write it down, don't probe.
   creating to avoid twins
 - Dates into `Deadlines.md` · self-image into `About me.md` (as a hub with
   links, including a "remaining gaps" list)
+- Refresh `Home.md` — new projects/deadlines/open questions from the
+  interview belong on the dashboard immediately
 - Set frontmatter, link everything, `git commit`
 - Ask 3–5 follow-up questions about the biggest gaps

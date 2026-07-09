@@ -11,4 +11,4 @@ created: {{DATE}}
 - <what matters: shared projects, strengths, context>
 - Open: <unconfirmed facts → ask>
 
-Related: [[About me]] · [[Start here]]
+Related: [[About me]] · [[Home]]

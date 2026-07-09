@@ -13,9 +13,18 @@ lump — it gets split into atomic notes and woven into the vault.
    URL via WebFetch, transcripts directly). Several files: one pass each.
    **Large PDFs:** Read handles ~20 pages per call — work in page ranges
    (start with the table of contents), never silently truncate a book.
-2. **Extract the ideas:** list the 3–12 genuinely useful ideas — the ones
+2. **Triage first — not everything deserves the full treatment:**
+   - **Reference material** (something to *find again later*: a manual,
+     a review, a clipping, a recipe): ONE source note in `30-knowledge/`
+     with tags and the reference (template: `_templates/source-note.md`)
+     — done, skip to step 5. No atomization, no link web. Organizing
+     effort must never exceed the value of what's being organized.
+   - **Build material** (something the person will *think or build with*:
+     exam sources, project research, ideas): full treatment below.
+   - Unsure? Ask in one line: "keep it findable, or work it in properly?"
+3. **Extract the ideas:** list the 3–12 genuinely useful ideas — the ones
    the person would want to find again. Skip filler.
-3. **Write atomic notes** in the vault language, one idea per note, into
+4. **Write atomic notes** in the vault language, one idea per note, into
    `30-knowledge/<domain>/` (max ONE level of subfolders; if the source
    feeds a thesis/exam/project, link it from that project note). Before
    creating a note, run `python3 ~/Brain/.tools/search.py <topic>` — if a
@@ -25,9 +34,10 @@ lump — it gets split into atomic notes and woven into the vault.
    - `source:` frontmatter with the full reference
    - verbatim quotes only in a source note (`_templates/source-note.md`)
    - `[[link]]` related notes — only where it truly adds understanding
-4. **Archive the source file** to `90-archive/raw/` (create if missing) so
+5. **Archive the source file** to `90-archive/raw/` (create if missing) so
    raw/ stays empty.
-5. Report in 3 lines: N notes, where, what got linked.
+6. Report in 3 lines: N notes, where, what got linked — every filing
+   visible, nothing silent.
 
 ## Rules
 - Own words beat copying — a pasted source is collecting, not understanding.

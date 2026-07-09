@@ -28,7 +28,11 @@ about filing, no tags, no thinking. Sorting happens later at the review.
   (template: `40-decisions/_template.md`). Append-only.
 - **Deadlines:** if the capture contains a concrete date/deadline, ALSO
   add a one-liner to `~/Brain/Deadlines.md` right away — deadlines must
-  never wait for the weekly review.
+  never wait for the weekly review. If it lands in the next ~3 dates,
+  also refresh the "Next deadlines" block in `~/Brain/Home.md`.
+- **Reference material** ("keep this findable": a link, a quote, a
+  recommendation): still just one inbox file — the review gives it the
+  light treatment (tags, no atomization). Never over-process a bookmark.
 - **Several thoughts in one dump** (common with voice): split at clear
   topic boundaries — one file each.
 

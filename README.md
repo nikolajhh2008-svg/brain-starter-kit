@@ -4,14 +4,39 @@
 [![Made for Obsidian](https://img.shields.io/badge/Made%20for-Obsidian-7C3AED.svg)](https://obsidian.md)
 [![Works with Claude Code](https://img.shields.io/badge/Works%20with-Claude%20Code-D97706.svg)](https://claude.com/claude-code)
 
-**Brainwarden — a second brain that maintains itself.** An Obsidian vault and Claude
-Code working on the same Markdown files: you dump thoughts with zero
-friction — Claude turns them into atomic, linked notes, keeps the inbox
-empty (one 10-minute ritual a week), and runs an onboarding interview so your brain knows you from
-day one.
+**The easiest way to start a second brain — you talk, Claude does the
+maintenance.** An Obsidian vault and Claude Code working on the same
+Markdown files: the setup asks you **three questions** and builds your
+first real notes within minutes — your project, your deadlines, a living
+`Home` dashboard. No empty vault, no taxonomy homework, no "now what?".
 
 No plugins, no cloud service, no lock-in — just a folder of Markdown,
-Git, and four Claude skills.
+Git, and five small Claude skills.
+
+## What actually happens
+
+- **You say:** *"capture: dentist Thursday 3pm — and Lena recommended
+  that sleep book"* → two inbox files appear instantly; Thursday lands in
+  your [[Deadlines]] and on `Home`. At the weekly review the book becomes
+  a one-line reference note (tagged, findable, not over-processed) and
+  Lena's people note gets a line.
+- **You drop a 40-page PDF** into `00-inbox/raw/` and say *"ingest"* →
+  if it feeds your exam or project, it comes back as atomic, linked study
+  notes; if it's just a manual, it becomes one findable reference note.
+  Claude asks when unsure — and always reports what went where.
+- **You ask:** *"what does my brain know about my thesis?"* → an answer
+  built **only from your own notes**, every claim a clickable `[[link]]`,
+  plus an honest "here's what your brain doesn't know yet."
+
+## The one habit
+
+You need exactly **one habit**: dump things into the brain — a sentence
+to Claude, a file into the inbox. That's it. Filing, linking, deadline
+tracking, weekly cleanup, remembering what you forgot: Claude's job, not
+yours. Skip a few weeks? Nothing breaks — the next review catches up in
+batches and welcomes you back without guilt. Second brains die of
+maintenance debt; this one hands the maintenance to something that never
+gets tired of it.
 
 ## Who this is for
 
@@ -22,10 +47,26 @@ Git, and four Claude skills.
 - **Anyone using Claude Code** who wants their AI to actually *know* them
   across sessions — not start from zero every conversation.
 - **Obsidian-curious beginners** who never got past the empty vault: the
-  onboarding interview fills it on day one, and the review keeps it alive.
+  setup fills it in minutes, and the review keeps it alive.
 
-You need exactly two things: a Claude subscription and ~35 minutes. You do
-NOT need to know Markdown, Git, PARA or Zettelkasten — that's Claude's job.
+You need exactly two things: a Claude subscription and ~20 minutes from
+nothing installed to a populated brain (plus an optional 15-minute
+interview that makes the brain really know you). You do NOT need to know
+Markdown, Git, PARA or Zettelkasten — that's Claude's job.
+
+## Who this is NOT for
+
+Honesty saves everyone time:
+
+- If **tags + search + relaxed standards** already keep your vault alive,
+  you don't need this. This is for people for whom the maintenance habit
+  — not the tooling — was the thing that failed.
+- If you want an AI to **write your thinking for you** — this kit
+  deliberately keeps the notes in *your* words. Claude files, links,
+  reminds and researches; it doesn't replace your head.
+- If you want **maximum features** — this kit is deliberately small
+  (five skills, one search script). There are 40-command kits out there;
+  this isn't one, on purpose.
 
 ## How it works
 
@@ -38,13 +79,17 @@ flowchart LR
     E --> G["atomic, linked notes<br/>(knowledge · people · projects)"]
     F --> G
     G --> H["🎯 output<br/>study sheets · drafts · decisions"]
+    G --> I["💬 cited answers<br/>(&quot;what do I know about …?&quot;)"]
+    G --> J["❓ open questions"]
+    J -- "&quot;research my brain&quot;" --> G
 ```
 
-Three habits, nothing more: **capture** (anytime, formless) · **ingest**
-(feed it sources) · **review** (weekly, inbox to zero — including a sweep
-of what the week produced but nobody captured). Plus one power move:
-**"research my brain"** — Claude takes the open questions and fills them
-with verified, sourced facts.
+Five verbs, nothing more: **capture** (anytime, formless) · **ingest**
+(feed it sources) · **ask** (answers from your own notes, cited) ·
+**review** (weekly, inbox to zero — including a sweep of what the week
+produced but nobody captured, a contradiction check against your past
+decisions, and connections nobody thought to search for) · **research**
+(Claude fills your open questions with verified, sourced facts).
 
 ## Quickstart
 
@@ -57,18 +102,21 @@ Open Claude Code (`claude` in your terminal) and say **one sentence**:
 > https://github.com/nikolajhh2008-svg/brainwarden — clone it and
 > follow SETUP-FOR-CLAUDE.md step by step.
 
-Claude clones the kit itself, checks your prerequisites, and walks you
-through setup + onboarding interview.
+Claude clones the kit itself, checks your prerequisites, asks three
+questions — and minutes later you open Obsidian to a brain that already
+contains your first project, your deadlines and a living `Home` page.
+The deep onboarding interview comes after that first win, and only if
+you want it.
 
 **Never used Obsidian or Claude Code?** → **[TUTORIAL.md](TUTORIAL.md)**
-(zero to a running brain in 30 minutes, with checkpoints). Stuck?
+(zero to a running brain, with checkpoints). Stuck?
 → [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ## Two guides — one for you, one for your AI
 
 | For | File | What it is |
 |---|---|---|
-| 🧑 **Human** | [TUTORIAL.md](TUTORIAL.md) | Zero to running brain in 30 min, with checkpoints |
+| 🧑 **Human** | [TUTORIAL.md](TUTORIAL.md) | Zero to running brain, with checkpoints |
 | 🤖 **Claude** | [SETUP-FOR-CLAUDE.md](SETUP-FOR-CLAUDE.md) | The machine-readable setup runbook — **the repo is the installer** |
 
 You only hand Claude the repo link — it clones, asks, adapts, installs.
@@ -77,17 +125,19 @@ You only hand Claude the repo link — it clones, asks, adapts, installs.
 
 - `~/Brain` with a flat, PARA-inspired base (inbox → projects → areas →
   knowledge → decisions → archive)
-- **Your** areas and your first project — Claude asks about your life and
-  names the folders in your words (a student gets different areas than a
-  founder)
+- **Your first project and your areas — before any interview.** Claude
+  derives them from three answers and names the folders in your words (a
+  student gets different areas than a founder)
+- **`Home.md`** — a living dashboard Claude keeps current: active
+  projects, next deadlines, open questions, what's new this week
 - **Your language** — the repo is English; your brain's content can live
   in German or any language you pick during setup
-- Three installed skills (capture / ingest / review) + global rules so
-  every future Claude session knows your brain
-- An "About me" filled by the **onboarding interview** — optionally
-  pre-filled by a consent-gated scan of your own computer ("may I look
-  around to fill this in?") — plus people notes, deadlines, and a Git
-  history from commit one
+- Five installed skills (capture / ingest / ask / review / research) +
+  global rules so **every** future Claude session knows your brain —
+  whatever project is open
+- Optionally, the **onboarding interview** afterwards (10–15 min): people
+  notes, self-image, goals — pre-fillable by a consent-gated scan of your
+  own computer ("may I look around to fill this in?")
 
 ## Customizing (the numbering is expansion space)
 
@@ -106,33 +156,48 @@ time later) Claude offers opt-in extras that slot right in:
 prefixes. **Free:** everything else — area names in your words, your
 modules, your language, which templates you keep. Adding a module later
 is one sentence: *"add a journal module to my brain."* Already have a
-vault? The setup **adopts** your structure instead of overwriting it.
+vault? The setup **adopts** your structure instead of overwriting it
+(worst case it quarantines your old notes untouched in `OLD_VAULT/` —
+never deleted, never restructured without your OK).
 
 ## What's inside
 
 | Path | Contents |
 |---|---|
-| [`vault-template/`](vault-template/) | The complete vault: folder schema, rules ([CLAUDE.md](vault-template/CLAUDE.md)), templates, deterministic search tool |
-| [`claude-skills/`](claude-skills/) | The four skills: `brain-capture` · `brain-ingest` · `brain-review` · `brain-research` |
+| [`vault-template/`](vault-template/) | The complete vault: folder schema, rules ([CLAUDE.md](vault-template/CLAUDE.md)), `Home` dashboard, templates, deterministic search tool |
+| [`claude-skills/`](claude-skills/) | The five skills: `brain-capture` · `brain-ingest` · `brain-ask` · `brain-review` · `brain-research` |
 | [`SETUP-FOR-CLAUDE.md`](SETUP-FOR-CLAUDE.md) | Step-by-step setup that Claude executes itself |
-| [`INTERVIEW.md`](INTERVIEW.md) | The onboarding interview (7 blocks, 22 questions) |
+| [`INTERVIEW.md`](INTERVIEW.md) | The optional onboarding interview (7 blocks, 22 questions) |
 | [`examples/`](examples/) | Style models (reference only — never copied into your vault) |
-| [`PHILOSOPHY.md`](PHILOSOPHY.md) | Why it's built this way: the three ways second brains die, and the design answers |
+| [`PHILOSOPHY.md`](PHILOSOPHY.md) | Why it's built this way: how second brains die, and the design answers |
+
+**Why so small?** Five skills and one Python file is the product, not a
+limitation. Every extra command is one more thing a beginner has to
+learn, trust and remember — and the maintenance promise only holds if
+the system itself needs none.
 
 ## Principles
 
+- **The first win comes before the first chore** — the setup builds real
+  notes from three answers; nobody meets an empty vault.
 - **Atomic** — one idea = one note; people get individual notes; link everything.
+- **Triage** — reference material gets tags and a home; only build
+  material gets the full atomic treatment. Organizing effort must never
+  exceed the value of what's organized.
 - **File by actionability** — "which project/area needs this now?", never
   by topic taxonomy. Findability comes from links and search, not folder depth.
 - **Zero-friction capture** — "capture: …" is enough; structure happens at
   review time, not capture time.
-- **Processing duty** — the inbox goes to **zero** weekly (second brains
-  die of full inboxes, not missing features).
+- **Processing duty** — the inbox goes to **zero** at every review
+  (second brains die of full inboxes, not missing features).
+- **The brain shows its work** — every filing decision is reported, every
+  change is a Git commit away from undo. No silent auto-capture.
 - **The success metric is output** — texts, decisions, study sheets;
   never note count.
 - **Append-only decisions** — decision records never get rewritten.
 - **Deterministic search first** — `search.py` finds the relevant notes;
-  Claude reads hits, not the whole vault (saves context).
+  Claude reads hits, not the whole vault (saves context). And what search
+  can't find — the things you forgot to ask — the weekly review surfaces.
 
 ## Contributing
 

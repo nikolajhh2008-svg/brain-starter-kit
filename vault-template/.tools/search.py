@@ -4,9 +4,11 @@
     python3 ~/Brain/.tools/search.py real-rates gold
     python3 ~/Brain/.tools/search.py "chilling effect" --k 5
 
-Scoring: hits in title/filename (x5), in tags (x3), in body (x1).
-Accent-insensitive (cafe matches café). Output: top-k files with
-matching lines — Claude then reads ONLY those files, not the whole vault.
+Scoring: word-start hits in title/filename (x5), in tags (x3), in body
+lines (x1); mid-word-only hits score reduced in title/tags and not at all
+in the body ("test" no longer surfaces "fastest", while "note" still
+finds "notes"). Accent-insensitive (cafe matches café). Output: top-k
+files with matching lines — Claude then reads ONLY those files.
 """
 import os, re, sys, unicodedata
 
@@ -58,12 +60,17 @@ def main():
             tags = fold(tags_block(text))
             score, lines = 0, []
             for t in terms:
-                if t in name:
+                pat = re.compile(r"\b" + re.escape(t))
+                if pat.search(name):
                     score += 5
-                if t in tags:
+                elif t in name:
+                    score += 2
+                if pat.search(tags):
                     score += 3
+                elif t in tags:
+                    score += 1
                 for line in text.splitlines():
-                    if t in fold(line):
+                    if pat.search(fold(line)):
                         score += 1
                         clean = line.strip()[:120]
                         if len(lines) < 3 and clean and not line.startswith("---") and clean not in lines:

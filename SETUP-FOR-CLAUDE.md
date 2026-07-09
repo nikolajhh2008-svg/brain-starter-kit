@@ -45,7 +45,7 @@ Check for name collisions first: if `~/.claude/skills/brain-capture`
 (or -ingest / -review / -research / -ask) already exists, STOP and ask —
 never overwrite an existing skill silently. Then
 `mkdir -p ~/.claude/skills` and copy the five folders from
-`claude-skills/` into it.
+`skills/` into it.
 Loading note: if `~/.claude/skills/` already existed, new skills load
 live in the current session; if the directory was just created, one
 restart of Claude Code is needed before the first "capture:".

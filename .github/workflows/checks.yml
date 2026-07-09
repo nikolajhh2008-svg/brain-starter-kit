@@ -1,0 +1,31 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: search.py compiles and runs
+        run: |
+          python3 -m py_compile vault-template/.tools/search.py
+          cd vault-template && python3 .tools/search.py inbox --k 3
+
+      - name: exactly five skills, each with a SKILL.md
+        run: |
+          test "$(ls skills | wc -l)" -eq 5
+          for s in skills/*/; do test -f "$s/SKILL.md"; done
+
+      - name: plugin manifests are valid JSON
+        run: |
+          python3 -c "import json; json.load(open('.claude-plugin/plugin.json')); json.load(open('.claude-plugin/marketplace.json'))"
+
+      - name: no stale references
+        run: |
+          ! grep -rn "Start here" --include="*.md" .
+          ! grep -rn "claude-skills" --include="*.md" .

@@ -20,7 +20,9 @@ about filing, no tags, no thinking. Sorting happens later at the review.
 
    _Captured: YYYY-MM-DD HH:MM · Context: <one line on where it came from>_
    ```
-3. Confirm with ONE line: "✓ captured: <title>". No essays.
+3. Confirm with ONE line — naming the destination on special cases so
+   nothing feels like it vanished: "✓ captured: <title> → Deadlines +
+   Home". No essays.
 
 ## Special cases
 - **Decisions:** starts with "decision:" (or clearly is one) → write a

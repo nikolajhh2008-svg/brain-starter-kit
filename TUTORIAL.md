@@ -20,7 +20,14 @@ ends with a checkpoint ("how you know it worked").
    both native) so paths match.
 3. Type `claude`, sign in with your account.
 
-✅ **Checkpoint:** Claude greets you with a prompt in the terminal.
+*(Would rather never touch a terminal? Install
+[VS Code](https://code.visualstudio.com) and its
+[Claude Code extension](https://code.claude.com/docs/en/vs-code) instead —
+you get a graphical chat panel, and every later step works the same by
+pasting into that panel.)*
+
+✅ **Checkpoint:** Claude greets you with a prompt in the terminal (or in
+the VS Code chat panel).
 
 ---
 

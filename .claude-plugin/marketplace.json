@@ -1,0 +1,22 @@
+{
+  "name": "brainwarden",
+  "owner": {
+    "name": "nikolajhh2008-svg",
+    "url": "https://github.com/nikolajhh2008-svg"
+  },
+  "metadata": {
+    "description": "Brainwarden — five Claude Code skills for an Obsidian second brain.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "brainwarden",
+      "source": "./",
+      "description": "The five brainwarden skills (capture, ingest, ask, review, research) — for people who already have a vault. New here? The guided setup in SETUP-FOR-CLAUDE.md builds the vault too.",
+      "version": "1.0.0",
+      "homepage": "https://github.com/nikolajhh2008-svg/brainwarden",
+      "repository": "https://github.com/nikolajhh2008-svg/brainwarden",
+      "license": "MIT"
+    }
+  ]
+}

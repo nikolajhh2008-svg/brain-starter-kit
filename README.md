@@ -3,6 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Made for Obsidian](https://img.shields.io/badge/Made%20for-Obsidian-7C3AED.svg)](https://obsidian.md)
 [![Works with Claude Code](https://img.shields.io/badge/Works%20with-Claude%20Code-D97706.svg)](https://claude.com/claude-code)
+[![checks](https://github.com/nikolajhh2008-svg/brainwarden/actions/workflows/checks.yml/badge.svg)](https://github.com/nikolajhh2008-svg/brainwarden/actions/workflows/checks.yml)
+
+![Brainwarden — an Obsidian vault Claude Code sets up and maintains](.github/assets/hero.jpg)
 
 **The easiest way to start a second brain — you talk, Claude does the
 maintenance.** An Obsidian vault and Claude Code working on the same
@@ -108,9 +111,30 @@ contains your first project, your deadlines and a living `Home` page.
 The deep onboarding interview comes after that first win, and only if
 you want it.
 
-**Never used Obsidian or Claude Code?** → **[TUTORIAL.md](TUTORIAL.md)**
-(zero to a running brain, with checkpoints). Stuck?
-→ [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+## Pick your path
+
+- **Never used Obsidian or Claude Code?** → **[TUTORIAL.md](TUTORIAL.md)**
+  — zero to a running brain, with a checkpoint after every stage.
+- **Terminal not your thing?** Install [VS Code](https://code.visualstudio.com)
+  with the [Claude Code extension](https://code.claude.com/docs/en/vs-code)
+  (`Cmd/Ctrl+Shift+X` → search "Claude Code" → Install): a graphical chat
+  panel, no command line — paste the same Quickstart sentence there.
+- **Comfortable with Claude Code?** The fast lane:
+  ```bash
+  git clone https://github.com/nikolajhh2008-svg/brainwarden
+  cd brainwarden && claude "follow SETUP-FOR-CLAUDE.md step by step"
+  ```
+- **Already have a vault and just want the five skills?**
+  ```
+  /plugin marketplace add nikolajhh2008-svg/brainwarden
+  /plugin install brainwarden@brainwarden
+  ```
+  Skills only — they expect the kit's core folders at `~/Brain`; if your
+  vault differs, the full setup's adopt path maps it first.
+- **Just browsing?** → [`examples/`](examples/) shows what finished notes
+  look like, readable right here on GitHub. Nothing to install.
+
+Stuck anywhere? → [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ## Two guides — one for you, one for your AI
 
@@ -165,7 +189,7 @@ never deleted, never restructured without your OK).
 | Path | Contents |
 |---|---|
 | [`vault-template/`](vault-template/) | The complete vault: folder schema, rules ([CLAUDE.md](vault-template/CLAUDE.md)), `Home` dashboard, templates, deterministic search tool |
-| [`claude-skills/`](claude-skills/) | The five skills: `brain-capture` · `brain-ingest` · `brain-ask` · `brain-review` · `brain-research` |
+| [`skills/`](skills/) | The five skills: `brain-capture` · `brain-ingest` · `brain-ask` · `brain-review` · `brain-research` |
 | [`SETUP-FOR-CLAUDE.md`](SETUP-FOR-CLAUDE.md) | Step-by-step setup that Claude executes itself |
 | [`INTERVIEW.md`](INTERVIEW.md) | The optional onboarding interview (7 blocks, 22 questions) |
 | [`examples/`](examples/) | Style models (reference only — never copied into your vault) |

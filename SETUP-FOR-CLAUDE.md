@@ -201,6 +201,10 @@ Their notes are sacred; an update only ever replaces kit infrastructure
 
 1. **Fresh clone** of this repo (old clones may predate a history rewrite
    — if `git pull` errors, delete the old clone folder and re-clone).
+   Check `grep "Kit version" ~/Brain/CLAUDE.md` to see what you're
+   upgrading from (vaults older than 1.0.0 have no marker — treat them as
+   pre-1.0). After the update, set the marker to the current version
+   (add the line if missing).
 2. **Skills:** replace the old `brain-*` folders in `~/.claude/skills/`
    with the current five from `skills/`. If their skills were
    personalized (translated, custom paths), diff first and port the new

@@ -97,7 +97,8 @@ garden; it never replaces the plants.
 ## Instructions for Claude
 - Retrieval: ALWAYS run `python3 .tools/search.py <terms>` from the
   vault root (this folder) first — saves context; then read only the
-  hits, never the whole vault.
+  hits, never the whole vault. (`--stats` prints the vault's honest
+  numbers: note counts, maturity distribution, review history.)
 - `Home.md` is the living dashboard — the review refreshes all four
   blocks; deadline captures update its "Next deadlines" block right away.
   It must always reflect the current state of the brain.

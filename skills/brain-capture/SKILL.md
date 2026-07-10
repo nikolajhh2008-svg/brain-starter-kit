@@ -8,6 +8,12 @@ description: Frictionless capture into the Brain (~/Brain/00-inbox). Use when th
 A thought becomes a file in `~/Brain/00-inbox/` IMMEDIATELY — no questions
 about filing, no tags, no thinking. Sorting happens later at the review.
 
+**Conventions:** `~/Brain` below means the vault path recorded in your
+global rules (`Brain vault:` line) — only when none is set does it mean
+`~/Brain` literally. `python3` means your working python command
+(on most Windows machines that's `py -3`; the global rules block names
+the right one).
+
 ## Steps
 1. Content = whatever follows "capture:" (or the thought from context when
    they say "capture that").

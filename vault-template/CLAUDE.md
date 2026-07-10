@@ -4,7 +4,7 @@ One folder, two windows: an Obsidian vault AND a Claude Code working
 directory on the same Markdown files. Structure: PARA-inspired
 (deliberately flat) plus Zettelkasten principles for knowledge.
 
-Kit version: 1.1.0 (brainwarden — updates read this line to know what
+Kit version: 1.2.0 (brainwarden — updates read this line to know what
 they're upgrading from, and set it to the new version afterwards)
 
 **Vault language: {{LANGUAGE}}** — write all notes, titles and links in
@@ -95,8 +95,9 @@ garden; it never replaces the plants.
   words stays theirs.
 
 ## Instructions for Claude
-- Retrieval: ALWAYS run `python3 ~/Brain/.tools/search.py <terms>` first
-  (saves context), then read only the hits — never the whole vault.
+- Retrieval: ALWAYS run `python3 .tools/search.py <terms>` from the
+  vault root (this folder) first — saves context; then read only the
+  hits, never the whole vault.
 - `Home.md` is the living dashboard — the review refreshes all four
   blocks; deadline captures update its "Next deadlines" block right away.
   It must always reflect the current state of the brain.
@@ -105,8 +106,9 @@ garden; it never replaces the plants.
   source → `source-note.md` · person → `person-note.md` · project →
   `project-note.md` · area → `area-note.md` · journal → `journal-entry.md`
   · decision → `40-decisions/_template.md`. When instantiating, fill the
-  DATE/NAME placeholders with real values; the files inside `_templates/`
-  keep their placeholders forever.
+  DATE/NAME placeholders with real values; the template files themselves
+  keep their placeholder tokens forever (their prose may be translated —
+  the tokens stay).
   Never rewrite a decision record — append.
 - Inside `30-knowledge/` at most ONE level of subfolders (like `people/`);
   everywhere else, no new subfolder without a reason.

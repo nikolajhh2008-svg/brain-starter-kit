@@ -8,6 +8,12 @@ description: Enrich the Brain with researched facts — take open questions and 
 Open questions and thin notes don't have to wait for the human. Research
 them, verify, and work the findings in — every claim with a source.
 
+**Conventions:** `~/Brain` below means the vault path recorded in your
+global rules (`Brain vault:` line) — only when none is set does it mean
+`~/Brain` literally. `python3` means your working python command
+(on most Windows machines that's `py -3`; the global rules block names
+the right one).
+
 ## Steps
 1. **Pick targets:** the notes' "open → ask" markers, thin notes the human
    names, or the open questions from the last review. Confirm the list in

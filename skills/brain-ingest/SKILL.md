@@ -8,6 +8,12 @@ description: Work sources into the Brain — split PDFs/transcripts/articles fro
 Raw material in, knowledge network out. A source is NEVER filed as one
 lump — it gets split into atomic notes and woven into the vault.
 
+**Conventions:** `~/Brain` below means the vault path recorded in your
+global rules (`Brain vault:` line) — only when none is set does it mean
+`~/Brain` literally. `python3` means your working python command
+(on most Windows machines that's `py -3`; the global rules block names
+the right one).
+
 ## Steps
 1. **Fetch the source:** files from `~/Brain/00-inbox/raw/` (PDF via Read,
    URL via WebFetch, transcripts directly). Several files: one pass each.

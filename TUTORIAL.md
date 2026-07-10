@@ -17,15 +17,12 @@ ends with a checkpoint ("how you know it worked").
    "PowerShell" · Linux: any shell) and install — current guide:
    [claude.com/claude-code](https://claude.com/claude-code).
 
-   **On Windows, do these two things first** (they prevent 90 % of
-   Windows problems): install
-   [Git for Windows](https://git-scm.com/downloads/win) with default
-   settings — even if "Git" means nothing to you, it's the piece that
-   lets Claude run the setup commands — and stay on native Windows
-   (skip WSL unless you already live in it; Obsidian is a Windows app
-   and struggles with WSL paths). After installing Claude Code, run
-   `claude doctor` — it should find Git Bash. Anything acting up?
-   → the Windows section in [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+   **On Windows:** one extra install first —
+   [Git for Windows](https://git-scm.com/downloads/win), default
+   settings, just click through. You don't need to know what it is;
+   it's the piece that lets Claude run the setup for you. If anything
+   acts up later, the Windows section in
+   [TROUBLESHOOTING.md](TROUBLESHOOTING.md) has the fixes.
 3. Type `claude`, sign in with your account.
 
 *(Would rather never touch a terminal? Install

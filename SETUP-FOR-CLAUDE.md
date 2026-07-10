@@ -41,6 +41,13 @@ The human may not know this kit, Obsidian, or Git. **You drive:**
 ask — adopt it (Step 0), merge into it, or let them pick another path.
 Never copy over an existing folder unasked.
 
+**Their vault lives somewhere else** (iCloud folder, different name,
+`~/Documents/Notes` …)? **Don't move it.** Adopt it in place and record
+its real path in Step 4's `Brain vault:` line — the skills follow that
+line, not a hardcoded location. `~/Brain` is just the default for fresh
+installs. (Everywhere this runbook says `~/Brain`, substitute their
+actual vault path.)
+
 Fresh install (ONLY into an empty/new `~/Brain`):
 `mkdir -p ~/Brain && cp -R vault-template/. ~/Brain/`
 (note the `/.` — it copies contents incl. hidden `.tools/`, no nesting).
@@ -50,6 +57,14 @@ silently overwrites files they may already have (their own `Home.md`,
 `About me.md` …). Copy only what's missing instead:
 `cd vault-template && cp -Rn . ~/Brain/` (`-n` = never overwrite a file
 that exists), then check nothing of theirs changed before going on.
+
+**If they already had a `Home.md`,** `cp -n` correctly skipped the
+template — but the skills need its four dashboard blocks (`Right now`,
+`Next deadlines`, `Open questions`, `New this week`). Add those four
+headings to THEIR existing Home (their own content stays above); if
+their Home is thin, offer to replace it with the template and fold their
+links in. Do this BEFORE Step 3b — every later "fill Home" instruction
+assumes the blocks exist.
 
 Verify: `~/Brain/CLAUDE.md` and `~/Brain/.tools/search.py` exist. You may
 delete the cloned repo folder after setup — mention it.
@@ -102,10 +117,10 @@ move) and enrich them. Never create a duplicate next to their original.
    current state of the brain.
 4. **Set the language:** replace `{{LANGUAGE}}` in `~/Brain/CLAUDE.md`.
    If it's not English, translate `Home.md`, `Inbox rule.md`,
-   `About me.md`, `Deadlines.md`, the decision template
-   `40-decisions/_template.md` and the `_templates/` into it (the
-   vault's `CLAUDE.md` stays English by design — it is read by Claude,
-   not by them).
+   `About me.md`, `Deadlines.md`, `00-inbox/raw/README.md`, the decision
+   template `40-decisions/_template.md` and the `_templates/` into it
+   (keep the `{{…}}` placeholder tokens; the vault's `CLAUDE.md` stays
+   English by design — it is read by Claude, not by them).
 5. **Show it:** have them open Obsidian ("Open folder as vault" →
    `~/Brain`) and click **Home**. A populated brain, minutes in, before
    any interview — that moment is the point of this whole step.
@@ -139,9 +154,11 @@ nothing — modules can be added any time later by just asking Claude
 Ask for their first name (you'll use it when filling future decision
 records and addressing them). Replace `{{DATE}}` with today's date in
 `About me.md` + `Deadlines.md` — nothing else.
-**Leave ALL templates untouched** — both `_templates/` and
-`40-decisions/_template.md` keep their `{{DATE}}`/`{{NAME}}`
-placeholders forever; they are filled per note, at creation time.
+**Never fill the `{{DATE}}`/`{{NAME}}` placeholder tokens inside the
+template files** (`_templates/` and `40-decisions/_template.md`) — they
+are filled per note, at creation time, forever. Translating the
+templates' surrounding prose into the vault language (Step 3b) is
+expected and fine — only the placeholder tokens stay.
 
 ## Step 4 — Global rules
 With their OK, add to `~/.claude/CLAUDE.md` (create if missing):
@@ -149,9 +166,14 @@ With their OK, add to `~/.claude/CLAUDE.md` (create if missing):
 Use the python command that worked in Step 0 — on most Windows machines
 that is `py -3`, not `python3`; write the block with the right one:
 
+Write the vault's REAL path into the first line — the skills read it
+from here, which is what lets the kit work with a vault anywhere (an
+adopted iCloud vault, a different name, several machines):
+
 ```markdown
-## Brain (~/Brain — Obsidian vault + Claude working directory)
-- Retrieval: run `python3 ~/Brain/.tools/search.py <terms>` first, then
+## Brain (Obsidian vault + Claude working directory)
+- Brain vault: ~/Brain   ← the actual path; every brain-* skill uses this
+- Retrieval: run `python3 <vault>/.tools/search.py <terms>` first, then
   read only the hits — never the whole vault. "What do I know about X?"
   → skill brain-ask.
 - Capture triggers: whenever a session produces (a) a decision, (b) a
@@ -192,7 +214,8 @@ Either way, if anything changed after Step 5's baseline commit:
 over a dirty tree.
 
 ## Step 7 — Verify, then hand over
-Run this checklist and show the results (fix anything that fails):
+Run this checklist and show the results (fix anything that fails).
+Vault not at `~/Brain`? Substitute its recorded path in every command:
 - [ ] `ls ~/Brain` shows `00-inbox` … `90-archive` + their modules
 - [ ] `~/Brain/Home.md` names their real first project under "Right now"
       (not the template placeholder line)
@@ -202,7 +225,11 @@ Run this checklist and show the results (fix anything that fails):
 - [ ] `cd ~/Brain && git log --oneline` shows the setup commit
 - [ ] No setup placeholders left OUTSIDE the templates:
       `grep -rnE "\{\{(NAME|LANGUAGE|DATE)\}\}" ~/Brain --exclude-dir=_templates | grep -v "_template.md"`
-      (templates keep their placeholders on purpose — never "fix" them)
+      (templates keep their placeholders on purpose — never "fix" them;
+      note: on the ADOPT path, `About me.md`/`Deadlines.md`/`CLAUDE.md`
+      arrive fresh from the template — Step 3b.4/3e must still fill
+      their `{{LANGUAGE}}`/`{{DATE}}` even when the "first win" was
+      built from existing notes)
 
 If anything above fails mid-setup and can't be fixed: a fresh install
 may simply be removed (`rm -rf ~/Brain`) and restarted — say so instead
@@ -245,4 +272,7 @@ Their notes are sacred; an update only ever replaces kit infrastructure
    current template — preserving their `{{LANGUAGE}}` value and any
    personal edits (diff first, ask when unsure), not just the Commands
    section.
-4. Re-run the Step-7 checklist, then `git commit -m "kit update"`.
+4. **Since 1.2.0 the skills follow the `Brain vault:` line** in the
+   global rules — make sure the block has one with their real vault
+   path (add it if the old block predates it).
+5. Re-run the Step-7 checklist, then `git commit -m "kit update"`.

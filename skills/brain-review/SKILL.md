@@ -8,6 +8,12 @@ description: Weekly review of the Brain (~/Brain) — inbox to zero, deepen thin
 Keeps the brain alive — the #1 killer of second brains is an inbox nobody
 empties.
 
+**Conventions:** `~/Brain` below means the vault path recorded in your
+global rules (`Brain vault:` line) — only when none is set does it mean
+`~/Brain` literally. `python3` means your working python command
+(on most Windows machines that's `py -3`; the global rules block names
+the right one).
+
 ## Steps
 1. **Inbox to ZERO** (hard rule): PROCESS every file in `~/Brain/00-inbox/`
    (except `Inbox rule.md`) — never just move it:

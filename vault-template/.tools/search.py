@@ -47,9 +47,9 @@ def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     scored = []
     for dirpath, dirs, files in os.walk(root):
-        dirs[:] = [d for d in dirs if d not in (".git", ".obsidian", ".tools")]
+        dirs[:] = [d for d in dirs if d not in (".git", ".obsidian", ".tools", "_templates")]
         for f in files:
-            if not f.endswith(".md"):
+            if not f.endswith(".md") or f.startswith("_"):
                 continue
             path = os.path.join(dirpath, f)
             try:

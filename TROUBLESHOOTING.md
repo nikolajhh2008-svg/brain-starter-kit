@@ -106,6 +106,12 @@ don't know your PATH).
 
 ## Windows quirks
 
+**Setting up on Windows — the two-minute version:** install Git for
+Windows (default settings), stay on native Windows (skip WSL unless you
+already live in it — Obsidian handles WSL paths badly), and after
+installing Claude Code run `claude doctor`: it should list Git Bash. If
+it doesn't, or anything below matches your symptom, read on.
+
 **`claude` says "not recognized" although the install reported success?**
 Re-run the install from CMD instead of PowerShell:
 `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`

@@ -137,8 +137,11 @@ you want it.
   /plugin marketplace add nikolajhh2008-svg/brainwarden
   /plugin install brainwarden@brainwarden
   ```
-  Skills only — they expect the kit's core folders at `~/Brain`; if your
-  vault differs, the full setup's adopt path maps it first.
+  Works with the vault you already have, wherever it lives — after
+  installing, tell Claude: *"adopt my existing vault at <path> — follow
+  the adopt path in brainwarden's SETUP-FOR-CLAUDE.md."* Nothing gets
+  moved or overwritten; the skills follow a `Brain vault:` line in your
+  global rules from then on.
 - **Just browsing?** → [`examples/`](examples/) shows what finished notes
   look like, readable right here on GitHub. Nothing to install.
 

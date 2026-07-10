@@ -6,7 +6,7 @@ created: {{DATE}}
 
 # Decision: <title>
 
-**Date:** YYYY-MM-DD · **Decided by:** {{NAME}}
+**Date:** {{DATE}} · **Decided by:** {{NAME}}
 
 ## Context
 <Why did this decision come up? 2–4 sentences.>

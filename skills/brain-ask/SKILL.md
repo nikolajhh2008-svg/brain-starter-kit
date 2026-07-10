@@ -9,6 +9,12 @@ Chats evaporate — the brain doesn't. This skill answers questions from
 the human's OWN notes, shows where every claim comes from, and is honest
 about what the brain does not know.
 
+**Conventions:** `~/Brain` below means the vault path recorded in your
+global rules (`Brain vault:` line) — only when none is set does it mean
+`~/Brain` literally. `python3` means your working python command
+(on most Windows machines that's `py -3`; the global rules block names
+the right one).
+
 ## Steps
 1. **Prime, then search wide:** skim `~/Brain/Home.md` first (the living
    dashboard — it often already frames the answer). Then

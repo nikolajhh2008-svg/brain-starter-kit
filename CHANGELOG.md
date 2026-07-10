@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.0] — 2026-07-10
+
+For everyone: works with the vault you already have, wherever it lives.
+
+- **The vault path is no longer hardcoded.** Setup records your real
+  vault location in a `Brain vault:` line in the global rules, and all
+  five skills follow it — an adopted vault stays exactly where it is
+  (iCloud folder, different name, anything). `~/Brain` is just the
+  default for fresh installs. The plugin install now genuinely works
+  for people who already have a vault.
+- **Non-English setups fixed end-to-end** (found by a fresh from-zero
+  test): the "leave templates untouched" rule no longer contradicts the
+  translate instruction (tokens stay, prose translates), and the raw
+  zone's README joined the translate list.
+- **Search stops indexing templates** — no more placeholder noise in
+  results — and the decision template uses one date format throughout.
+- **Windows made calmer:** the tutorial's stage 1 is jargon-free (one
+  install, one sentence), details moved to the Windows section in
+  TROUBLESHOOTING; the skills name the `py -3` fallback.
+
 ## [1.1.0] — 2026-07-10
 
 Depth release: notes now grow over time instead of staying thin — plus

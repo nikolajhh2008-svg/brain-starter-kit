@@ -3,6 +3,7 @@ type: knowledge
 tags: [learning, method]
 source: own experience
 created: 2026-01-15
+status: evergreen
 ---
 
 <!-- DEMO CONTENT — style reference only, never copied into your vault. Shows the style: one idea, own words, a consequence. -->

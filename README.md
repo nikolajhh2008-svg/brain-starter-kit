@@ -92,8 +92,9 @@ Five verbs, nothing more: **capture** (anytime, formless) · **ingest**
 (feed it sources) · **ask** (answers from your own notes, cited) ·
 **review** (weekly, inbox to zero — including a sweep of what the week
 produced but nobody captured, a contradiction check against your past
-decisions, and connections nobody thought to search for) · **research**
-(Claude fills your open questions with verified, sourced facts).
+decisions, connections nobody thought to search for, and deepening 2–3
+thin notes toward `evergreen`) · **research** (Claude fills your open
+questions with verified, sourced facts).
 
 ## Quickstart
 

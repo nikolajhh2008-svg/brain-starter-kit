@@ -80,4 +80,75 @@ from `~/.claude/CLAUDE.md`. Nothing else was touched.
 plain Markdown, so every Obsidian feature works on top. If you want
 Claude to build canvases (visual maps) or bases (table views) for you,
 install Obsidian's official Claude skills for markdown/canvas/bases and
-just ask ("build me a canvas map of my ABA project").
+just ask ("build me a canvas map of my thesis project").
+
+**Can Claude run the weekly review on its own (unattended)?** Yes — but
+it's opt-in, and you should know the trade-offs first:
+- **It spends your Claude subscription.** Every unattended run uses plan
+  usage like a normal session. A weekly review is cheap; anything more
+  frequent adds up fast. Weekly is the sweet spot — never sub-daily.
+- **It edits and commits on its own.** Safe *because* the vault is
+  Git-backed — every change stays one `git checkout` from undo — and it
+  follows the review skill's autonomous rules: it deletes nothing
+  uncertain, archives nothing unasked, and parks every question under
+  Home's "Open questions" instead of a chat you'll never see.
+- **It's a convenience, not the system.** The manual "brain review" is
+  the real ritual; the scheduler just presses the button on weeks you
+  forget. A phone reminder is the simpler, free alternative.
+
+Two ways to set it up: the easiest is **Claude Code Desktop → Routines**
+(same on macOS/Windows/Linux: New routine → Local → your `~/Brain` →
+instructions "run the brain-review skill on this vault" → Weekly).
+Terminal users can instead ask Claude — *"set up an automatic weekly
+brain review"* — and it writes the scheduler job for your OS (launchd /
+cron / Task Scheduler, with the full path to `claude` — scheduled tasks
+don't know your PATH).
+
+## Windows quirks
+
+**`claude` says "not recognized" although the install reported success?**
+Re-run the install from CMD instead of PowerShell:
+`curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`
+
+**Setup hangs at `mkdir`/copy commands?** Almost always: Git for Windows
+is missing, so Unix-style commands run in PowerShell where they're
+invalid. Install [Git for Windows](https://git-scm.com/downloads/win)
+(default settings), open a fresh terminal, restart `claude`. Check with
+`claude doctor` — it should find Git Bash. Paths looking mangled
+(`C:Userscl`)? Same cause, same fix.
+
+**`python3` "not recognized"?** Windows Python usually ships `python`
+and `py`, not `python3`. Tell Claude: *"python3 doesn't exist here, use
+py -3"* — it will also fix the search command in your global CLAUDE.md
+so future sessions use the right one.
+
+**Using WSL and Obsidian can't open the vault (or is very slow)?**
+Obsidian is a Windows app and handles `\\wsl$` paths badly — known
+Obsidian limitation, not a kit bug. Put the vault on the Windows side
+(`C:\Users\You\Brain` = `/mnt/c/Users/You/Brain` from WSL): Obsidian
+opens it normally, and the speed difference is not noticeable at a few
+hundred Markdown files.
+
+## Capturing on the go (mobile)
+
+Your vault lives locally and is versioned with Git — three honest ways
+to feed it from your phone, each with a catch:
+
+1. **Obsidian Sync** (easiest, ~$4/month): install the Obsidian app on
+   your phone, enable Sync for the vault. The rule that keeps it safe:
+   **Git on the desktop, Sync to the phone — never both on the same
+   device against the same folder** (that's where corrupted-vault
+   stories come from).
+2. **Quick-capture shortcut into `00-inbox/`** (free, still needs a
+   sync): an iOS Shortcut or Android automation that appends text to an
+   inbox file — but the text only reaches your desktop via some sync
+   (way 1, or iCloud with all its Git caveats). A typing shortcut, not a
+   transport.
+3. **Phone notes app + one capture** (free, zero setup, always works):
+   jot or dictate into your normal notes app; back at the computer, one
+   *"capture: [paste]"* to Claude. Costs you one manual step in the
+   evening — and nothing else.
+
+What we don't promise: real-time sync everywhere, zero-cost + zero-setup
+at once, or running Git itself from the phone (possible via Working
+Copy/MGit, but far more setup than this kit asks of anyone).

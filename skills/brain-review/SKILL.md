@@ -49,12 +49,25 @@ empties.
 8. **Structure check (quarterly-ish):** if an area/folder no longer matches
    the person's life, propose renaming/archiving it. The onboarding interview
    was a starting point, not a cage.
-9. **Refresh `Home.md`:** active projects under "Right now", next 3 dates
-   under "Next deadlines", the open loops under "Open questions", this
-   week's notes under "New this week". Home must always show the current
-   state of the brain.
-10. **Commit:** `cd ~/Brain && git add -A && git commit -m "review YYYY-MM-DD"`.
-11. Report: what was filed where, what was deleted, what needs their
+9. **Deepen 2–3 notes (this is where depth actually comes from):** take
+   the oldest or most-used `status: seed` / `status: growing` knowledge
+   notes and grow them toward the note anatomy in the vault `CLAUDE.md` —
+   the missing `source:`, one concrete case or number, a limit or
+   counter-position, the `[[links]]`. Research the researchable parts
+   (rules of `brain-research`); park anything only the human can answer
+   as an open question. Bump `status` HONESTLY — `evergreen` only once
+   the anatomy is truly met. Two or three notes a week compounds; trying
+   to finish the whole vault at once just stalls the review.
+10. **Random revisit:** open ONE random older note. Stale? Missing an
+    obvious link? A near-twin that should merge? Make one concrete
+    improvement and move on — this is how the far corners stay alive
+    instead of rotting unread.
+11. **Refresh `Home.md`:** active projects under "Right now", next 3 dates
+    under "Next deadlines", the open loops under "Open questions", this
+    week's notes under "New this week". Home must always show the current
+    state of the brain.
+12. **Commit:** `cd ~/Brain && git add -A && git commit -m "review YYYY-MM-DD"`.
+13. Report: what was filed where, what was deleted, what needs their
     input — every filing decision visible, everything reversible via Git.
 
 ## Rules
@@ -62,3 +75,10 @@ empties.
 - Archive beats delete for finished projects; delete beats archive for noise.
 - Missed weeks are normal — the review is built to catch up (batches),
   never to guilt-trip. Welcome them back, don't scold.
+
+## Autonomous mode (only when run unattended by a scheduler)
+When this review runs headless (no human in the loop): (1) delete nothing
+that isn't unambiguous junk — when unsure, file it. (2) Never archive
+without asking — list candidates as questions instead. (3) Route ALL
+questions to Home's "Open questions" block, never to chat. (4) Finish by
+refreshing Home, `git commit`, and a short report to a log file.

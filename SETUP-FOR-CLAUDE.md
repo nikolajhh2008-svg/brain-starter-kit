@@ -17,9 +17,11 @@ The human may not know this kit, Obsidian, or Git. **You drive:**
   guide the install — on macOS `xcode-select --install`), git identity set
   (`git config user.name` — if empty, set a name/email with their OK, or
   they hit "Please tell me who you are" at the first commit), and
-  **python3** available (`python3 --version`; on Windows try `py`). No
-  git? The setup still works — skip the clone (download the ZIP) and the
-  commit steps, and say so.
+  **python** available — try in this order and REMEMBER which one worked
+  (you need it again in Step 4): `python3 --version` → `python --version`
+  → (Windows) `py -3 --version`. None? Guide the install (python.org,
+  "Add to PATH" checked). No git? The setup still works — skip the clone
+  (download the ZIP) and the commit steps, and say so.
 - Explain each step in ONE sentence before doing it.
 - Ask before touching `~/.claude/CLAUDE.md` (step 4).
 - **Already have a vault?** Adopt, don't overwrite: scan their existing
@@ -144,6 +146,9 @@ placeholders forever; they are filled per note, at creation time.
 ## Step 4 — Global rules
 With their OK, add to `~/.claude/CLAUDE.md` (create if missing):
 
+Use the python command that worked in Step 0 — on most Windows machines
+that is `py -3`, not `python3`; write the block with the right one:
+
 ```markdown
 ## Brain (~/Brain — Obsidian vault + Claude working directory)
 - Retrieval: run `python3 ~/Brain/.tools/search.py <terms>` first, then
@@ -209,7 +214,10 @@ Hand over with a 30-second demo of the five verbs, each one line:
 ~10 min) · **research** ("research my brain" — fills open questions with
 sourced facts). Finish with one sentence on how to extend later: "Ask me
 to add a module, rename an area, or change the language — the structure
-grows with you."
+grows with you." Optional extra to mention (don't set it up unasked):
+"I can also schedule the weekly review to run itself — ask me any time;
+see the auto-review entry in TROUBLESHOOTING.md for the usage-cost
+trade-offs first."
 
 ## Updating a vault built with an older kit version
 

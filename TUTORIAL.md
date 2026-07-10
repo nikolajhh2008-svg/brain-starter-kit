@@ -14,10 +14,18 @@ ends with a checkpoint ("how you know it worked").
 **Claude Code** (the engine):
 1. You need a Claude subscription with Claude Code access → [claude.com](https://claude.com).
 2. Open a terminal (Mac: `Cmd+Space` → "Terminal" · Windows: Start →
-   "PowerShell", ideally with WSL · Linux: any shell) and install —
-   current guide: [claude.com/claude-code](https://claude.com/claude-code).
-   On Windows, keep vault and Claude on the same side (both in WSL, or
-   both native) so paths match.
+   "PowerShell" · Linux: any shell) and install — current guide:
+   [claude.com/claude-code](https://claude.com/claude-code).
+
+   **On Windows, do these two things first** (they prevent 90 % of
+   Windows problems): install
+   [Git for Windows](https://git-scm.com/downloads/win) with default
+   settings — even if "Git" means nothing to you, it's the piece that
+   lets Claude run the setup commands — and stay on native Windows
+   (skip WSL unless you already live in it; Obsidian is a Windows app
+   and struggles with WSL paths). After installing Claude Code, run
+   `claude doctor` — it should find Git Bash. Anything acting up?
+   → the Windows section in [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 3. Type `claude`, sign in with your account.
 
 *(Would rather never touch a terminal? Install

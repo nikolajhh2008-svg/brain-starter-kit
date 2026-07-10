@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.1.0] — 2026-07-10
+
+Depth release: notes now grow over time instead of staying thin — plus
+platform hardening from real end-to-end tests.
+
+- **Maturity status for knowledge notes:** `status: seed | growing |
+  evergreen` in the note schema — thinness stays honest, and the review
+  gets its deepening queue
+- **The review compounds depth:** two new steps — deepen 2–3 seed notes
+  toward the anatomy each week, and a random revisit that keeps old
+  corners alive; plus explicit autonomous-mode rules for scheduled runs
+- **Note anatomy per type** documented in the vault CLAUDE.md (a
+  knowledge note wants evidence, one concrete case and a
+  counter-position — "atomic" means one idea, not few words)
+- **"The red line"** — the AI-gardens-it-does-not-author doctrine is now
+  an operational rule Claude loads every session, not just philosophy
+- **Optional unattended weekly review** documented (Claude Desktop
+  Routines or a scheduler job) with an honest subscription-cost warning
+- **Windows hardening:** Git-for-Windows guidance up front, `py -3`
+  fallback for the search tool, a Windows quirks section in
+  TROUBLESHOOTING; **mobile capture** gets an honest FAQ (Sync vs.
+  shortcut vs. notes-app — and what we don't promise)
+- **Safety fixes from adopt/update end-to-end tests** (also shipped as a
+  hotfix to 1.0.0): adopting an existing vault can no longer overwrite
+  the user's files, no duplicate first-win projects, migration backlog
+  lands on Home, updates refresh the whole vault CLAUDE.md, and the
+  vault ships its own `.gitignore`
+
 ## [1.0.0] — 2026-07-09
 
 Initial public release.

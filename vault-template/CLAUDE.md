@@ -4,7 +4,7 @@ One folder, two windows: an Obsidian vault AND a Claude Code working
 directory on the same Markdown files. Structure: PARA-inspired
 (deliberately flat) plus Zettelkasten principles for knowledge.
 
-Kit version: 1.0.0 (brainwarden — updates read this line to know what
+Kit version: 1.1.0 (brainwarden — updates read this line to know what
 they're upgrading from, and set it to the new version afterwards)
 
 **Vault language: {{LANGUAGE}}** — write all notes, titles and links in
@@ -40,8 +40,14 @@ type: knowledge | source | decision | project | area
 tags: [kebab-case, lowercase, few]
 source: <URL/book/person — only for external sources>
 created: YYYY-MM-DD
+status: seed | growing | evergreen   # maturity — knowledge notes only
 ---
 ```
+- `status` (knowledge notes only) marks **maturity, not importance**:
+  `seed` = a thin first capture · `growing` = own words + a source ·
+  `evergreen` = meets the note anatomy below. The marker keeps thinness
+  HONEST and hands the weekly review its deepening candidates — it is
+  never a reason to reject or delete a thin note.
 - Inbox captures need NO frontmatter (zero friction) — added at review time.
 - File names: descriptive, kebab-case; date-prefixed only for episodic notes.
 
@@ -56,6 +62,37 @@ created: YYYY-MM-DD
   read note B.
 - Maps of content only after ~150 notes; no new top-level folders without
   a deliberate decision.
+
+## Note anatomy (target depth per type — "atomic" means ONE idea, not few words)
+- **Knowledge note** (`30-knowledge/`, target `evergreen`): the idea in
+  your own words → the evidence (`source:` + where in it) → one concrete
+  case, number or example → a limit or counter-position where one exists →
+  the `[[links]]`. Aim ~100–400 words. `seed` is allowed — the status just
+  keeps the thinness honest and flags it for a later review.
+- **Person note** (`30-knowledge/people/`): a dossier, not an index card —
+  role/relationship, verified facts, recent interactions, open questions.
+- **Project note** (`10-projects/`): state + the next physical action + a
+  short running log; grows by at least a line every time it comes up.
+- **Area note** (`20-areas/`): the standard you hold + current state + what
+  you're watching.
+- **Decision** (`40-decisions/`): deliberately terse and append-only —
+  brevity is correct here.
+- **MOC** (only past ~150 notes): a map with 2–3 sentences of framing per
+  strand, never a bare list of links.
+- **Principle:** depth comes from revision rounds (the review), not the
+  first draft — captures may be thin, `status` keeps that honest.
+
+## The red line — Claude gardens, it does not author
+The notes are the human's thinking in the human's words. Claude tends the
+garden; it never replaces the plants.
+- Add researched facts only WITH a source and only marked as research
+  (`source:` or an inline "(researched YYYY-MM-DD)").
+- Never rewrite or "improve" the human's own opinions, reflections or
+  phrasing — ask a question and work their answer in; don't overwrite
+  their voice.
+- Suggest interpretive summaries and links; don't silently manufacture
+  them. A vault full of AI paste becomes an attic — a vault in their
+  words stays theirs.
 
 ## Instructions for Claude
 - Retrieval: ALWAYS run `python3 ~/Brain/.tools/search.py <terms>` first

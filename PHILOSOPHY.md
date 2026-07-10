@@ -56,6 +56,7 @@ review catches up in batches), not a walk of shame.
 - **AI as maintainer, not author.** Claude files, links, prunes and
   reminds — but the notes are your words. A brain full of paraphrased-
   by-you ideas stays useful; a brain full of AI paste becomes an attic.
+  (The operational rule lives in the vault's CLAUDE.md: "The red line".)
 - **The brain shows its work.** Auto-capture systems that silently hoard
   everything drown in their own junk — the documented failure mode of
   "extract everything" memory tools. Here every filing is reported, every

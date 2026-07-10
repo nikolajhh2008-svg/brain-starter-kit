@@ -3,6 +3,7 @@ type: knowledge
 tags: []
 source:
 created: {{DATE}}
+status: seed
 ---
 
 # <One idea, stated as a claim>

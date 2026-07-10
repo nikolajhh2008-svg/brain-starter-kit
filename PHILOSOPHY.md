@@ -1,9 +1,8 @@
 # Why this kit works (and why second brains usually die)
 
 The design isn't taste — it's built against the documented ways personal
-knowledge systems fail (one widely-cited survey: 68% of PKM-tool adopters
-abandon within six months). If you know the reasoning, you can bend every
-rule intelligently.
+knowledge systems fail; most are abandoned within months, and the causes
+repeat. If you know the reasoning, you can bend every rule intelligently.
 
 ## The four causes of death
 

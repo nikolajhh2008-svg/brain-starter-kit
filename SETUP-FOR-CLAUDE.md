@@ -28,15 +28,27 @@ The human may not know this kit, Obsidian, or Git. **You drive:**
   **quarantine path** instead: move their old notes into
   `~/Brain/OLD_VAULT/` (visible, untouched, still theirs) and integrate
   them gradually at reviews. Never delete or restructure existing notes
-  without an explicit OK per change.
+  without an explicit OK per change. After adopting, list every note
+  still living outside the core folders under Home's "Open questions"
+  as a migration backlog (the reviews work through it) — and point out
+  that capture now writes to `00-inbox/`; note any pre-existing inbox
+  file of theirs for merging at the first review.
 
 ## Step 1 — Create the vault
 **First check whether `~/Brain` already exists.** If it does: STOP and
 ask — adopt it (Step 0), merge into it, or let them pick another path.
 Never copy over an existing folder unasked.
 
-Fresh install: `mkdir -p ~/Brain && cp -R vault-template/. ~/Brain/`
+Fresh install (ONLY into an empty/new `~/Brain`):
+`mkdir -p ~/Brain && cp -R vault-template/. ~/Brain/`
 (note the `/.` — it copies contents incl. hidden `.tools/`, no nesting).
+
+**Adopting an existing vault? NEVER run that copy over it** — `cp -R`
+silently overwrites files they may already have (their own `Home.md`,
+`About me.md` …). Copy only what's missing instead:
+`cd vault-template && cp -Rn . ~/Brain/` (`-n` = never overwrite a file
+that exists), then check nothing of theirs changed before going on.
+
 Verify: `~/Brain/CLAUDE.md` and `~/Brain/.tools/search.py` exist. You may
 delete the cloned repo folder after setup — mention it.
 
@@ -66,7 +78,11 @@ Zettelkasten by name — you translate answers into structure; methods are
 your job, not theirs.
 
 ### 3b. Build the first win — real notes, within minutes
-From those answers, without further questions:
+From those answers, without further questions.
+**Adopting?** Search before you build: run `search.py` for the project
+and areas from their answers — if they already exist somewhere in the
+old structure, MOVE them into `10-projects/`/`20-areas/` (one OK per
+move) and enrich them. Never create a duplicate next to their original.
 1. **Propose 2–4 areas** derived from answer 1, in THEIR words ("I'd
    create these areas for you: … — rename anything"), then create them as
    subfolders in `20-areas/`, each with ONE seed note named like the
@@ -84,7 +100,8 @@ From those answers, without further questions:
    current state of the brain.
 4. **Set the language:** replace `{{LANGUAGE}}` in `~/Brain/CLAUDE.md`.
    If it's not English, translate `Home.md`, `Inbox rule.md`,
-   `About me.md`, `Deadlines.md` and the `_templates/` into it (the
+   `About me.md`, `Deadlines.md`, the decision template
+   `40-decisions/_template.md` and the `_templates/` into it (the
    vault's `CLAUDE.md` stays English by design — it is read by Claude,
    not by them).
 5. **Show it:** have them open Obsidian ("Open folder as vault" →
@@ -117,11 +134,12 @@ nothing — modules can be added any time later by just asking Claude
   weekly review day.
 
 ### 3e. Fill in remaining placeholders
-Ask for their first name. Replace `{{NAME}}` in
-`~/Brain/40-decisions/_template.md` and `{{DATE}}` in `About me.md` +
-`Deadlines.md` with today's date.
-**Leave `_templates/` untouched** — their `{{DATE}}`/`{{NAME}}`
-placeholders are filled per note, at creation time, forever.
+Ask for their first name (you'll use it when filling future decision
+records and addressing them). Replace `{{DATE}}` with today's date in
+`About me.md` + `Deadlines.md` — nothing else.
+**Leave ALL templates untouched** — both `_templates/` and
+`40-decisions/_template.md` keep their `{{DATE}}`/`{{NAME}}`
+placeholders forever; they are filled per note, at creation time.
 
 ## Step 4 — Global rules
 With their OK, add to `~/.claude/CLAUDE.md` (create if missing):
@@ -203,8 +221,10 @@ Their notes are sacred; an update only ever replaces kit infrastructure
    — if `git pull` errors, delete the old clone folder and re-clone).
    Check `grep "Kit version" ~/Brain/CLAUDE.md` to see what you're
    upgrading from (vaults older than 1.0.0 have no marker — treat them as
-   pre-1.0). After the update, set the marker to the current version
-   (add the line if missing).
+   pre-1.0). After the update, set the marker to the current version —
+   its canonical place is the template's: an own line directly under the
+   vault CLAUDE.md's intro paragraph, format `Kit version: X.Y.Z (…)`;
+   add it there if missing.
 2. **Skills:** replace the old `brain-*` folders in `~/.claude/skills/`
    with the current five from `skills/`. If their skills were
    personalized (translated, custom paths), diff first and port the new
@@ -213,5 +233,8 @@ Their notes are sacred; an update only ever replaces kit infrastructure
    template and fill its blocks from their real notes; if an old
    `Start here.md` exists, fold its links into Home, update backlinks to
    it, then remove it; refresh `.tools/search.py` with the current
-   version; update the Commands section of their vault `CLAUDE.md`.
+   version; and refresh the whole kit-owned vault `CLAUDE.md` from the
+   current template — preserving their `{{LANGUAGE}}` value and any
+   personal edits (diff first, ask when unsure), not just the Commands
+   section.
 4. Re-run the Step-7 checklist, then `git commit -m "kit update"`.

@@ -52,10 +52,11 @@ gets tired of it.
 - **Obsidian-curious beginners** who never got past the empty vault: the
   setup fills it in minutes, and the review keeps it alive.
 
-You need exactly two things: a Claude subscription and ~20 minutes from
-nothing installed to a populated brain (plus an optional 15-minute
-interview that makes the brain really know you). You do NOT need to know
-Markdown, Git, PARA or Zettelkasten — that's Claude's job.
+You need [Obsidian](https://obsidian.md) (free), a Claude subscription
+and ~20 minutes from nothing installed to a populated brain (plus an
+optional 10–15-minute interview that makes the brain really know you).
+You do NOT need to know Markdown, Git, PARA or Zettelkasten — that's
+Claude's job.
 
 ## Who this is NOT for
 

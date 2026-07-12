@@ -65,7 +65,37 @@ later". If they say "private": don't write it down, don't probe.
 8. Which ongoing duties are you carrying — and which are you pushing
    ahead of you?
 
-## Block 4 — Projects & goals
+## Block 4 — Zoom in: your work or your studies (adaptive)
+This block is where the brain earns its keep: knowing someone's actual
+tasks — not their title — is what later lets it take work off their
+plate. **Narrow down first, then go deep.** Ask which applies (studying /
+working / both) and follow only the fitting branch; both if both.
+
+**If working:**
+- What exactly is your job — what does the work consist of, concretely?
+  *Nudge: not the title, the activities. "I check price lists, answer
+  customer mails, prepare orders" beats "sales".*
+- Which tasks come back every single week?
+  *Nudge: reports? invoices? stock checks? the same three mails? List
+  them — recurring work is the most valuable thing this block collects.*
+- Where does most of your time actually go — and which part of that
+  annoys you the most?
+- Which programs or tools do you work in daily — and which one fights
+  you the most?
+- Who do you work with most closely (names, roles)?
+
+**If studying (school or university):**
+- Where are you (school/university, which year) — and what's the big
+  goal right now (final exams, degree, a specific grade)?
+- Which subjects or courses demand the most from you right now?
+- What eats most of your learning time?
+  *Nudge: summarizing? memorizing? writing? procrastinating one
+  specific subject?*
+- Which exams, submissions or presentations are coming up — with dates?
+- Which apps or tools do you use for school — notes, flashcards,
+  calendar?
+
+## Block 5 — Projects & goals
 9. What are you actually working on right now (work, school, personal) —
    and which of these projects is closest to your heart?
    *Nudge: also the unofficial stuff — a side project, something you
@@ -74,7 +104,7 @@ later". If they say "private": don't write it down, don't probe.
 11. The bigger picture: where do you want to be in ~5 years — which part
     is a dream, which is already a plan?
 
-## Block 5 — Knowledge & interests
+## Block 6 — Knowledge & interests
 12. What are you genuinely good at — what do people come to you for?
 13. What do you want to learn next?
     *Nudge: a skill for work/school · a language · a tool (AI? coding?) ·
@@ -86,7 +116,7 @@ later". If they say "private": don't write it down, don't probe.
     *Nudge: what did you actually do last weekend? what would friends
     say you always talk about?*
 
-## Block 6 — Working style & energy
+## Block 7 — Working style & energy
 16. When during the day are you most productive, and what does your real
     (not ideal) sleep/energy rhythm look like?
 17. How do you learn/work best — honestly, as it is?
@@ -95,7 +125,7 @@ later". If they say "private": don't write it down, don't probe.
     postponing?*
 19. What should Claude do more often in your collaboration — and less?
 
-## Block 7 — Closing
+## Block 8 — Closing
 20. What do you have genuine respect for in the coming year?
 21. What else should your brain absolutely know that I didn't ask about?
 22. Are there areas that stay fundamentally "private"? (I'll create a
@@ -109,8 +139,12 @@ later". If they say "private": don't write it down, don't probe.
   into `30-knowledge/` or `10-projects/` (templates: `knowledge-note.md`,
   `project-note.md`; fill `{{DATE}}` with real dates) — search before
   creating to avoid twins
-- Dates into `Deadlines.md` · self-image into `About me.md` (as a hub with
-  links, including a "remaining gaps" list)
+- Dates into `Deadlines.md` (one line per date, date first) · self-image
+  into `About me.md` (as a hub with links, including a "remaining gaps"
+  list)
+- Recurring tasks and time sinks from the zoom-in block become one note
+  per area (`20-areas/`) — that's the raw material for everything an
+  assistant can later take off their plate
 - Refresh `Home.md` — new projects/deadlines/open questions from the
   interview belong on the dashboard immediately
 - Set frontmatter, link everything, `git commit`

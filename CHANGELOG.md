@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased]
+
+- **Interview goes deeper where it counts:** new adaptive block 4
+  ("Zoom in: your work or your studies") — narrow down first
+  (studying / working / both), then follow the fitting branch into
+  concrete tasks, recurring work, time sinks and tools. Recurring
+  tasks land as area notes: the raw material for everything an
+  assistant can later take off your plate.
+- **Deadlines.md states its format:** one line per deadline, date
+  first (`2026-08-15` or `15.08.2026`) — readable for humans and
+  parseable for tools that treat the file as the deadline source.
+
 ## [1.2.0] — 2026-07-10
 
 For everyone: works with the vault you already have, wherever it lives.

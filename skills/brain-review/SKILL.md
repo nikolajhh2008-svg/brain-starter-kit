@@ -52,6 +52,16 @@ the right one).
    changes how a note reads.
 7. **Hygiene:** orphan notes (no inbound links), dead `[[links]]`, empty
    files — fix or report.
+   **Orphan clusters — act, don't just park a question:** a folder whose
+   files carry no `[[links]]` at all (machine-written content: an AI
+   assistant's memory mirror, app exports, read-later dumps) floats as
+   loose dots in the graph view. Fix it with ONE generated map note that
+   links every file in the cluster (readable alias from each file's first
+   heading or sentence, grouped by subfolder), filed by actionability
+   (usually `30-knowledge/`), linked from `Home.md`, and regenerated on
+   every review so it never goes stale. NEVER edit the foreign files
+   themselves — they belong to the tool that wrote them. Only the
+   keep/delete/gitignore question goes to the human.
 8. **Structure check (quarterly-ish):** if an area/folder no longer matches
    the person's life, propose renaming/archiving it. The onboarding interview
    was a starting point, not a cage.
